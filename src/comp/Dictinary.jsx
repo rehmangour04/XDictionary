@@ -6,7 +6,6 @@ const Dictinary = () => {
   const [result, setResult] = useState("");
   const handleSearch = () => {
     const wordLower = word.toLowerCase();
-    //search the word in the dictionary
     const foundMeaning = data.find(
       (entry) => entry.word.toLowerCase() === wordLower
     );
@@ -20,7 +19,7 @@ const Dictinary = () => {
 
   return (
     <div>
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
       <input
         type="text"
         value={word}
@@ -28,7 +27,7 @@ const Dictinary = () => {
         placeholder="Search for a word..."
       ></input>
       <button onClick={handleSearch}>Search</button>
-      <h2>Defination:</h2>
+      <h3>Definition:</h3>
       <p>{result}</p>
     </div>
   );
